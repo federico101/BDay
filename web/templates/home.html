@@ -4,11 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
 </head>
 
 <body>
-    NOICE
+    <div class="countdown">
+        <h1></h1>
+        <div class="time">
+            <h2 class="dayTime">00</h2>
+            <h2 class="dayLabel">Day</h2>
+        </div>
+        <div class="time">
+            <h2 class="hourTime">00</h2>
+            <h2 class="hourLabel">Hours</h2>
+        </div>
+        <div class="time">
+            <h2 class="minTime">00</h2>
+            <h2 class="minLabel">Minutes</h2>
+        </div>
+        <div class="time">
+            <h2 class="secTime">00</h2>
+            <h2 class="secLabel">Seconds</h2>
+        </div>
+    </div>
+
+    <script src="{{url_for('static', filename='js/home.js')}}"></script>
 </body>
 
 </html>

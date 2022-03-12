@@ -1,0 +1,36 @@
+.body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.countdown {
+    height: 100vh;
+    width: 100%;
+    padding: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.time {
+    line-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dayTime,
+.hourTime,
+.minTime,
+.secTime {
+    font-size: 2rem;
+}
+
+.dayLabel,
+.hourLabel,
+.minLabel,
+.secLabel {
+    font-size: 1rem;
+}
