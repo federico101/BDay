@@ -1,2 +1,1 @@
-# bdayWebsite
-Birthday Timer
+## This is a website that shows a timer before your birthday
