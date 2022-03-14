@@ -1,26 +1,18 @@
-const countdown = () => {
-    // target person's bday
-    const birthday = new Date("March 17, 2022 00:00:00").getTime();
-    const dateToday = new Date().getTime();
-    const timeLeft = birthday - dateToday;
-    
-    // variables for time 
-    const seconds = 1000;
-    const minutes = second * 60;
-    const hours = minutes * 60;
-    const days = hours * 24;
-    
-    const dayNum = Math.floor(timeLeft / days);
-    const hourNum = Math.floor((timeleft % days) / hours);
-    const minNum = Math.floor((timeleft % hours) / minutes);
-    const secNum = Math.floor((timeleft % minutes) / seconds);
-    
-    document.getElementsByClassName(".dayTime").innerText = dayNum;
-    document.getElementsByClassName(".hourTime").innerText = hourNum;
-    document.getElementsByClassName(".minTime").innerText = minNum;
-    document.getElementsByClassName(".secTime").innerText = secNum;
-};
-
-countdown();
-
-document.querySelector(".dayLabel").value = "!!!"
+let birthday = new Date("2022-03-17");
+const day = document.querySelector(".dayTime");
+const hour = document.querySelector(".hourTime");
+const minute = document.querySelector(".minTime");
+const second = document.querySelector(".secTime");
+setInterval(() => {
+    const current = new Date();
+    const elapsed = birthday - current;
+    const secondstotal = Math.floor(elapsed / 1000);
+    const days = Math.floor(secondstotal / 3600 / 24);
+    const hours = Math.floor(secondstotal / 3600) % 24;
+    const minutes = Math.floor(secondstotal / 60) % 60;
+    const seconds = Math.floor(secondstotal) % 60;
+    day.innerText = days;
+    hour.innerText = hours;
+    minute.innerText = minutes;
+    second.innerText = seconds;
+}, 1000);
