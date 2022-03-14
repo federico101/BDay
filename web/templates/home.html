@@ -11,23 +11,28 @@
 
 <body>
     <div class="countdown">
-        <h1></h1>
-        <div class="time">
-            <h2 class="dayTime">00</h2>
-            <h2 class="dayLabel">Day</h2>
+        <div class="hbd">
+            <p class="hbdtext"><b>Someone's birthday is coming!</b></p>
         </div>
-        <div class="time">
-            <h2 class="hourTime">00</h2>
-            <h2 class="hourLabel">Hours</h2>
+        <div class="times">
+            <div class="time">
+                <h2 class="dayTime">00</h2>
+                <h2 class="dayLabel">Day</h2>
+            </div>
+            <div class="time">
+                <h2 class="hourTime">00</h2>
+                <h2 class="hourLabel">Hours</h2>
+            </div>
+            <div class="time">
+                <h2 class="minTime">00</h2>
+                <h2 class="minLabel">Minutes</h2>
+            </div>
+            <div class="time">
+                <h2 class="secTime">00</h2>
+                <h2 class="secLabel">Seconds</h2>
+            </div>
         </div>
-        <div class="time">
-            <h2 class="minTime">00</h2>
-            <h2 class="minLabel">Minutes</h2>
-        </div>
-        <div class="time">
-            <h2 class="secTime">00</h2>
-            <h2 class="secLabel">Seconds</h2>
-        </div>
+        <img src="{{url_for('static', filename='svg/cake.svg') }}" width="100px" class="cake">
     </div>
 
 </body>

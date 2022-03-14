@@ -1,3 +1,6 @@
+const cakeShow = document.getElementsByClassName(".cake");
+const hbdTEXT = document.getElementsByClassName(".hbdtext");
+
 let birthday = new Date("2022-03-17");
 const day = document.querySelector(".dayTime");
 const hour = document.querySelector(".hourTime");

@@ -1,16 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&family=Lobster&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 }
 
 .countdown {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    gap: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    background: linear-gradient(-45deg, #ead5dc, #f4b6c2, #23a6d5, #003366);
+    background-size: 400% 400%;
+    animation: gradient-bg 15s ease infinite;
+}
+
+.countdown p {
+    color: white;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+    font-size: 3rem;
+    font-family: 'Josefin', sans-serif;
+    margin-bottom: 30px;
+}
+
+@keyframes gradient-bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.times {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .time {
@@ -19,6 +50,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 5;
+    font-family: 'Josefin', sans-serif;
+    color: white;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
 }
 
 .dayTime,
@@ -33,4 +68,11 @@
 .minLabel,
 .secLabel {
     font-size: 1rem;
+}
+
+/* cake */
+
+.countdown img {
+    filter: drop-shadow(0 0 .5rem rgba(0, 0, 0, .5));
+    z-index: 2;
 }
