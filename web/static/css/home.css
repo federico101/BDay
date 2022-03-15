@@ -22,7 +22,7 @@
     color: white;
     text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
     font-size: 3rem;
-    font-family: 'Josefin', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     margin-bottom: 30px;
 }
 
@@ -42,6 +42,10 @@
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
+}
+
+.times.disappear {
+    display: none;
 }
 
 .time {
@@ -75,4 +79,24 @@
 .countdown img {
     filter: drop-shadow(0 0 .5rem rgba(0, 0, 0, .5));
     z-index: 2;
+    display: none;
+}
+
+.countdown img.active {
+    display: block;
+}
+
+/* confettis */
+
+#my-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    visibility: hidden;
+}
+
+#my-canvas.reveal {
+    visibility: visible;
 }
