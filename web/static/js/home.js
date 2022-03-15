@@ -7,9 +7,9 @@ const bgCrowd = document.querySelector(".bg-crowd");
 // function for bg music to play and pause
 function bgPlay() {
     bgCrowd.play();
-}
+};
 
-let birthday = new Date("2022-03-15 16:34:00");
+let birthday = new Date("2022-03-16 00:03:00");
 const day = document.querySelector(".dayTime");
 const hour = document.querySelector(".hourTime");
 const minute = document.querySelector(".minTime");
@@ -35,4 +35,4 @@ const intervalID = setInterval(() => {
     times.classList.toggle("disappear");
     clearInterval(intervalID);
   }
-}, 1000); 
+}, 1000);

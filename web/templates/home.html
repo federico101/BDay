@@ -9,7 +9,7 @@
     <script type="text/javascript" src="{{ url_for('static', filename='js/home.js') }}" defer></script>
 </head>
 
-<body onload="bgPause()">
+<body>
     <div class="countdown">
         <div class="hbd">
             <p class="hbdtext">Someone's birthday is coming!</p>
@@ -37,6 +37,7 @@
         <audio class="bg-crowd">
             <source src="{{ url_for('static', filename='audio/happy-birthday-crowd.mp3') }}" type="audio/mpeg">
         </audio>
+        <a href="https://github.com/federico101">&copy;federico101</a>
     </div>
     
     <script src="{{ url_for('static', filename='js/index.min.js') }}"></script>
@@ -44,10 +45,6 @@
         var confettiSettings = { target: 'my-canvas' };
         var confetti = new ConfettiGenerator(confettiSettings);
         confetti.render();
-        
-        function bgPause() {
-            bgCrowd.pause();
-        }
     </script>
 </body>
 

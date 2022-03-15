@@ -16,6 +16,7 @@
     background: linear-gradient(-45deg, #ead5dc, #f4b6c2, #23a6d5, #003366);
     background-size: 400% 400%;
     animation: gradient-bg 15s ease infinite;
+    overflow: hidden;
 }
 
 .countdown p {
@@ -86,12 +87,23 @@
     display: block;
 }
 
+.countdown a {
+    position: fixed;
+    bottom: 20px;
+    font-family: sans-serif;
+    font-size: 0.5rem;
+    color: white;
+    text-decoration: none;
+}
+
 /* confettis */
 
 #my-canvas {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     min-height: 100vh;
     visibility: hidden;
@@ -99,4 +111,44 @@
 
 #my-canvas.reveal {
     visibility: visible;
+}
+
+/* queries */
+
+@media (min-width: 400px) {
+    .countdown {
+        padding: 20px;
+    }
+    
+    .countdown p {
+        font-size: 30px;
+    }
+    
+    .dayTime,
+    .hourTime,
+    .minTime,
+    .secTime {
+        font-size: 20px;
+    }
+    
+    .dayLabel,
+    .hourLabel,
+    .minLabel,
+    .secLabel {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .countdown p {
+        font-size: 2rem;
+    }
+    
+    .countdown img {
+        width: 250px;
+    }
+    
+    .countdown a {
+        font-size: 1rem;
+    }
 }
